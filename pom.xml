@@ -46,8 +46,6 @@
 		</dependency>
 	</dependencies>
 
-
-
 	<build>
 		<finalName>${project.artifactId}</finalName>
 
@@ -57,7 +55,27 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>cp-to-dist</id>
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<copy
+									file="${project.basedir}/target/${project.artifactId}-${project.version}.jar"
+									tofile="${project.basedir}/dist/${project.artifactId}.jar" />
+							</target>
+						</configuration>
+					</execution>
+				</executions>
 
+			</plugin>
 		</plugins>
 	</build>
 

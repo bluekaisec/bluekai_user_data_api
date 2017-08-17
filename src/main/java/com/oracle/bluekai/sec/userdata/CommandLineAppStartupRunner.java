@@ -15,7 +15,7 @@ import com.oracle.bluekai.sec.userdata.util.Util;
 @Configuration()
 public class CommandLineAppStartupRunner implements CommandLineRunner {
 
-	private static final int OUTPUT_WIDTH = 80;
+	private static final int OUTPUT_WIDTH = 90;
 
 	private static final String NOT_PROVIDED = "NOTPROVIDED";
 
@@ -66,7 +66,7 @@ public class CommandLineAppStartupRunner implements CommandLineRunner {
 
 		boolean ok = false;
 		String msg = null;
-		
+
 		String[] phintsArray = phints.split("&");
 
 		if (baseUrl.equals(NOT_PROVIDED)) {
@@ -101,12 +101,11 @@ public class CommandLineAppStartupRunner implements CommandLineRunner {
 		addToOutput(u, Util.fill(OUTPUT_WIDTH, "=") + "");
 		addToOutput(u, Util.fill(OUTPUT_WIDTH, "=") + "");
 		addToOutput(u, "");
-		addToOutput(u, " _____  _____   ______        _        ______  ________ ");
-		addToOutput(u, "|_   _||_   _|.' ____ \\      / \\     .' ___  ||_   __  |");
-		addToOutput(u, "  | |    | |  | (___ \\_|    / _ \\   / .'   \\_|  | |_ \\_|");
-		addToOutput(u, "  | '    ' |   _.____`.    / ___ \\  | |   ____  |  _| _  ");
-		addToOutput(u, "   \\ \\__/ /   | \\____) | _/ /   \\ \\_\\ `.___]  |_| |__/ |");
-		addToOutput(u, "    `.__.'     \\______.'|____| |____|`._____.'|________|");
+
+		addToOutput(u, " _   _               ___       _            _   ___ ___ ");
+		addToOutput(u, "| | | |___ ___ _ _  |   \\ __ _| |_ __ _    /_\\ | _ \\_ _|");
+		addToOutput(u, "| |_| (_-</ -_) '_| | |) / _` |  _/ _` |  / _ \\|  _/| | ");
+		addToOutput(u, " \\___//__/\\___|_|   |___/\\__,_|\\__\\__,_| /_/ \\_\\_| |___|");
 
 		if (msg != null) {
 			addToOutput(u, "");
