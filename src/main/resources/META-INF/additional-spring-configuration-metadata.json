@@ -1,0 +1,42 @@
+{"properties": [
+  {
+    "name": "wsUid",
+    "type": "java.lang.String",
+    "description": "A description for 'wsUid'"
+  },
+  {
+    "name": "baseUrl",
+    "type": "java.lang.String",
+    "description": "A description for 'baseUrl'"
+  },
+  {
+    "name": "wsPrivateKey",
+    "type": "java.lang.String",
+    "description": "A description for 'wsPrivateKey'"
+  },
+  {
+    "name": "siteId",
+    "type": "java.lang.String",
+    "description": "A description for 'siteId'"
+  },
+  {
+    "name": "bkuuid",
+    "type": "java.lang.String",
+    "description": "A description for 'bkuuid'"
+  },
+  {
+    "name": "pUserId",
+    "type": "java.lang.String",
+    "description": "A description for 'pUserId'"
+  },
+  {
+    "name": "pField",
+    "type": "java.lang.String",
+    "description": "A description for 'pField'"
+  },
+  {
+    "name": "phints",
+    "type": "java.lang.String",
+    "description": "A description for 'phints'"
+  }
+]}
