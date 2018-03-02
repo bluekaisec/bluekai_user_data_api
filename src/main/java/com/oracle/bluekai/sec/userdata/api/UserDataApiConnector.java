@@ -53,7 +53,7 @@ public class UserDataApiConnector {
 	}
 
 	private URIBuilder baseUri(int siteId) throws URISyntaxException {
-		return new URIBuilder("http://api.tags.bluekai.com/getdata/" + siteId + "/v1.2");
+		return new URIBuilder("https://api.tags.bluekai.com/getdata/" + siteId + "/v1.2");
 	}
 
 	private void start(URIBuilder uri, String[] phints, String wsUid, String wsPrivateKey)
