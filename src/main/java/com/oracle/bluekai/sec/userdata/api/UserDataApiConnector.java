@@ -72,7 +72,7 @@ public class UserDataApiConnector {
 
 	private void doApiCall(URIBuilder uri) throws URISyntaxException {
 		logger.info("Placing API request");
-		logger.info(" > Request URL:");
+		
 
 		Util.logUrlPretty(uri.build().toString());
 

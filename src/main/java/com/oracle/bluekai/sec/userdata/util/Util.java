@@ -40,19 +40,25 @@ public class Util {
 	public static void logUrlPretty(String uri) throws URISyntaxException {
 		String[] uriSplit = uri.toString().split("\\?");
 
-		logger.info("    " + uriSplit[0]);
+		StringBuilder logString = new StringBuilder();
+
+		logString.append(" > Request URL:");
+		logString.append("\r\n" + uriSplit[0]);
+
 		String[] args = uriSplit[1].split("&");
 
 		int i = 0;
 		for (String a : args) {
 			if (i == 0) {
-				logger.info("      ?" + a);
+				logString.append("\r\n      ?" + a);
 			} else {
-				logger.info("      &" + a);
+				logString.append("\r\n      &" + a);
 			}
 
 			i++;
 		}
+		logger.info(logString.toString());
+
 	}
 
 }

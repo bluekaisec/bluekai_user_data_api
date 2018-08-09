@@ -16,21 +16,24 @@ public class RestErrorHandler extends DefaultResponseErrorHandler {
 	@Override
 	public void handleError(ClientHttpResponse response) throws IOException {
 		log.error("Http Status: " + response.getStatusCode() + " / " + response.getStatusText());
-
+		StringBuilder logString = new StringBuilder();
 		if (response.getBody() != null) {
-			log.error("Response body: ");
+
+			logString.append("Response body:");
 			BufferedReader rdr = new BufferedReader(new InputStreamReader(response.getBody()));
 			try {
 				for (String line = rdr.readLine(); line != null; line = rdr.readLine()) {
-					log.error(" >> " + line);
+					logString.append("\r\n" + line);
 				}
 			} finally {
 				rdr.close();
 			}
 
+			log.error(logString.toString());
+
 		}
 
-		//throw new IOException("Http Status: " + response.getStatusCode());
+		// throw new IOException("Http Status: " + response.getStatusCode());
 	}
 
 }
